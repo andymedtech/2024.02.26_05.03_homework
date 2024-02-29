@@ -13,8 +13,4 @@ router.put("/", (req, res) => {
   res.end(req.method + req.baseUrl);
 });
 
-router.delete("/", (req, res) => {
-  res.end(req.method + req.baseUrl);
-});
-
 module.exports = router;

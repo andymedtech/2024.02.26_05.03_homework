@@ -1,12 +1,24 @@
 const express = require("express");
 const router = new express.Router();
 
-router.get("/", () => {});
+router.get("/", (req, res) => {
+  res.end(req.method + req.baseUrl);
+});
 
-router.get("/", () => {});
-router.get("/:id", () => {});
-router.post("/", () => {});
-router.put("/", () => {});
-router.delete("/", () => {});
+router.get("/:id", (req, res) => {
+  res.end(req.method + req.baseUrl + "/" + req.params.id);
+});
+
+router.post("/", (req, res) => {
+  res.end(req.method + req.baseUrl);
+});
+
+router.put("/", (req, res) => {
+  res.end(req.method + req.baseUrl);
+});
+
+router.delete("/", (req, res) => {
+  res.end(req.method + req.baseUrl);
+});
 
 module.exports = router;
